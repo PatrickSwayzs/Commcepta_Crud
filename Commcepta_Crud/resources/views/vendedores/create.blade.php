@@ -8,6 +8,16 @@
 @section('content')
     <div class="container">
 
+        @if($errors->any())
+            <ul class="alert alert-danger" style="width: 40%">
+                @foreach($errors->all() as $error)
+                    <li> {{ $error }} </li>
+                @endforeach
+            </ul>
+        @elseif(session()->has('success'))
+            {{ session('success') }}
+        @endif
+
         {!! Form::open(['url' => 'vendedores/store']) !!}
 
         <div class="form-group" style="width: 40%">
@@ -16,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Criar Produto', ['class'=>'btn btn-primary']) !!}
+            {!! Form::submit('Criar Vendedor', ['class'=>'btn btn-primary']) !!}
         </div>
     </div>
 

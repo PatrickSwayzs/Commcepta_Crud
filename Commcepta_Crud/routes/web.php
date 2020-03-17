@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('produtos', 'ProdutosController@index');
 Route::get('produtos/create', 'ProdutosController@create');
 Route::post('produtos/store','ProdutosController@store');
+Route::get('produtos/{id}/destroy', 'ProdutosController@destroy');
 
 Route::get('vendedores', 'VendedoresController@index');
 Route::get('vendedores/create', 'VendedoresController@create');
 Route::post('vendedores/store','VendedoresController@store');
+Route::get('vendedores/{id}/destroy', 'VendedoresController@destroy');
