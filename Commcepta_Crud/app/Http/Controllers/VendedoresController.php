@@ -16,4 +16,10 @@ class VendedoresController extends Controller
         return view('vendedores.create');
     }
 
+    public function store(Request $request){
+        $novo_vendedor = $request->all();
+        Vendedor::create($novo_vendedor);
+
+        return redirect('vendedores');
+    }
 }

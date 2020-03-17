@@ -1,0 +1,15 @@
+php -v
+composer -v
+composer create-project --prefer-dist laravel/laravel Commcepta_Crud
+cd Commcepta_Crud
+php artisan make:controller ProdutosController
+php artisan make:controller VendedoresController
+php artisan make:model Produto -m
+php artisan make:model Vendedor -m
+php artisan migrate
+composer require laravel/ui
+php artisan adminlte:install
+composer update jeroennoten/laravel-adminlte
+php artisan serve
+composer require jeroennoten/laravel-adminlte
+composer require laravelcollective/html

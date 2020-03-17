@@ -8,4 +8,16 @@
 @section('content')
     <div class="container">
 
+        {!! Form::open(['url' => 'vendedores/store']) !!}
+
+        <div class="form-group" style="width: 40%">
+            {!! Form::label('nome', 'Nome: ') !!}
+            {!! Form::text('nome', null, ['class'=>'form-control']) !!}
+        </div>
+
+        <div class="form-group">
+            {!! Form::submit('Criar Produto', ['class'=>'btn btn-primary']) !!}
+        </div>
+    </div>
+
 @stop
