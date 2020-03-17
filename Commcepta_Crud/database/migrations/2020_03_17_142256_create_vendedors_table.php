@@ -14,7 +14,8 @@ class CreateVendedorsTable extends Migration
     public function up()
     {
         Schema::create('vendedors', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('nome');
             $table->timestamps();
         });
     }

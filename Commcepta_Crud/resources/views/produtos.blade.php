@@ -1,12 +1,13 @@
-<html>
-    
-    <head>
-        <title>
-            Produtos
-        </title>
-    </head>
-    <body>
-        <h1>Olá {{$nome}}</h1>
-    </body>
-    
-</html>
+@yield('content')
+<div class="container">
+    <h1>Produtos</h1>
+    <ul>
+        @foreach($produtos as $prod)
+            <li>{{ $prod->descricao }}<br>
+                {{ $prod->categoria }}<br>
+                {{ $prod->preco }}
+            </li>
+        @endforeach
+    </ul>
+</div>
+
