@@ -13,6 +13,13 @@
             @foreach($vendedores as $vend)
                 <tr>
                     <td> {{ $vend->nome }} </td>
+                    <td>
+                        <!-- Botões para editar e excluir -->
+                        <a href="{{ route('vendedores.edit', ['id'=>$vend->id]) }}"
+                           class="btn-sm btn-success"> Editar</a>
+                        <a onclick="return confirm('Confirmar a Exclusão?')" href="{{ route('vendedores.destroy', ['id'=>$vend->id]) }}"
+                           class="btn-sm btn-danger"> Remover</a>
+                    </td>
         @endforeach
     </div>
 @endsection
