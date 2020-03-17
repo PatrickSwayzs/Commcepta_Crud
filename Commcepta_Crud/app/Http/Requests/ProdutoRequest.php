@@ -13,7 +13,8 @@ class ProdutoRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        //Retornar a requisição como true(que pode ser executada)
+        return true;
     }
 
     /**
@@ -23,8 +24,12 @@ class ProdutoRequest extends FormRequest
      */
     public function rules()
     {
+
         return [
-            //
+            //definindo as regras de validação
+            'descricao' => 'required',
+            'categoria' => 'required',
+            'preco' => 'required|numeric'
         ];
     }
 }

@@ -13,7 +13,8 @@ class VendedorRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        //Retornar a requisição como true(que pode ser executada)
+        return true;
     }
 
     /**
@@ -24,7 +25,8 @@ class VendedorRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            //definindo as regras de validação
+            'nome' => 'required',
         ];
     }
 }
