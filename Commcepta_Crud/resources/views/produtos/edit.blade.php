@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 @section('content_header')
     <div class="container">
-        <h1>Novo Produto</h1>
+        <h1>Editando Produto: {{ $produto->descricao }}</h1>
     </div>
 @endsection
 
@@ -18,25 +18,25 @@
             {{ session('success') }}
         @endif
 
-        {!! Form::open(['route' => 'produtos.store']) !!}
+        {!! Form::open(['route' => ["produtos.update", $produto->id], 'method'=>'put']) !!}
 
         <div class="form-group" style="width: 40%">
             {!! Form::label('descricao', 'Descrição: ') !!}
-            {!! Form::text('descricao', null, ['class'=>'form-control']) !!}
+            {!! Form::text('descricao', $produto->descricao, ['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group" style="width: 40%">
             {!! Form::label('categoria', 'Categoria: ') !!}
-            {!! Form::text('categoria', null, ['class'=>'form-control']) !!}
+            {!! Form::text('categoria', $produto->categoria, ['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group" style="width: 40%">
             {!! Form::label('preco', 'Preço: ') !!}
-            {!! Form::number('preco', null, ['class'=>'form-control']) !!}
+            {!! Form::number('preco', $produto->preco, ['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Criar Produto', ['class'=>'btn btn-primary']) !!}
+            {!! Form::submit('Editar Produto', ['class'=>'btn btn-primary']) !!}
         </div>
 
 

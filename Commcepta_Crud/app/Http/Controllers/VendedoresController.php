@@ -23,12 +23,24 @@ class VendedoresController extends Controller
         $novo_vendedor = $request->all();
         Vendedor::create($novo_vendedor);
 
-        return redirect('vendedores');
+        return redirect()->route('vendedores');
     }
 
     //Método para deletar registro
     public function destroy($id){
           Vendedor::find($id)->delete();
-          return redirect('vendedores');
+        return redirect()->route('vendedores');
+    }
+
+    //Método para buscar dados no BD e enviar para a rota de edição
+    public function edit($id){
+        $vendedor = Vendedor::find($id);
+        return view('vendedores.edit', compact('vendedor'));
+    }
+
+    //Método para alterar os dados no BD
+    public function update(VendedorRequest $request, $id){
+        $vendedor = Vendedor::find($id)->update($request->all());
+        return redirect()->route('vendedores');
     }
 }

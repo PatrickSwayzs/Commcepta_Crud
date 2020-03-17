@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 @section('content_header')
     <div class="container">
-        <h1>Novo Vendedor</h1>
+        <h1>Editar Vendedor: {{ $vendedor->nome }}</h1>
     </div>
 @stop
 
@@ -18,15 +18,15 @@
             {{ session('success') }}
         @endif
 
-        {!! Form::open(['route' => 'vendedores.store']) !!}
+        {!! Form::open(['route' => ["vendedores.update", $vendedor->id], 'method'=>'put']) !!}
 
         <div class="form-group" style="width: 40%">
             {!! Form::label('nome', 'Nome: ') !!}
-            {!! Form::text('nome', null, ['class'=>'form-control']) !!}
+            {!! Form::text('nome', $vendedor->nome, ['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Criar Vendedor', ['class'=>'btn btn-primary']) !!}
+            {!! Form::submit('Editar Vendedor', ['class'=>'btn btn-primary']) !!}
         </div>
     </div>
 

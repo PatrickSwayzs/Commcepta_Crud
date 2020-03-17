@@ -2,24 +2,26 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
+// Rotas Produtos
+Route::group(['prefix' => 'produtos', 'where' => ['id' => '[0-9]+']], function () {
+    Route::any('', ['as' => 'produtos', 'uses' => 'ProdutosController@index']);
+    Route::get('create', ['as' => 'produtos.create', 'uses' => 'ProdutosController@create']);
+    Route::get('{id}/destroy', ['as' => 'produtos.destroy', 'uses' => 'ProdutosController@destroy']);
+    Route::get('{id}/edit', ['as' => 'produtos.edit', 'uses' => 'ProdutosController@edit']);
+    Route::put('{id}/update', ['as' => 'produtos.update', 'uses' => 'ProdutosController@update']);
+    Route::post('store', ['as' => 'produtos.store', 'uses' => 'ProdutosController@store']);
 
-Route::get('produtos', 'ProdutosController@index');
-Route::get('produtos/create', 'ProdutosController@create');
-Route::post('produtos/store','ProdutosController@store');
-Route::get('produtos/{id}/destroy', 'ProdutosController@destroy');
+});
 
-Route::get('vendedores', 'VendedoresController@index');
-Route::get('vendedores/create', 'VendedoresController@create');
-Route::post('vendedores/store','VendedoresController@store');
-Route::get('vendedores/{id}/destroy', 'VendedoresController@destroy');
+//Rotas Vendedores
+Route::group(['prefix' => 'vendedores', 'where' => ['id' => '[0-9]+']], function () {
+    Route::any('', ['as' => 'vendedores', 'uses' => 'VendedoresController@index']);
+    Route::get('create', ['as' => 'vendedores.create', 'uses' => 'VendedoresController@create']);
+    Route::get('{id}/destroy', ['as' => 'vendedores.destroy', 'uses' => 'VendedoresController@destroy']);
+    Route::get('{id}/edit', ['as' => 'vendedores.edit', 'uses' => 'VendedoresController@edit']);
+    Route::put('{id}/update', ['as' => 'vendedores.update', 'uses' => 'VendedoresController@update']);
+    Route::post('store', ['as' => 'vendedores.store', 'uses' => 'VendedoresController@store']);
+
+});
+
