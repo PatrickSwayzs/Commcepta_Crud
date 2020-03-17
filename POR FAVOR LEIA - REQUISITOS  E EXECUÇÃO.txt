@@ -1,0 +1,17 @@
+REQUISITOS PARA O FUNCIONAMENTO
+1- CMDER (Já inclui no projeto)
+2- NodeJS (Necessário o download)
+3- PHP - (Eu utilizei o xampp, se ocorrer algum problema com o php na hora da execução, 
+por favor substitua o arquivo 'php.ini' localizado em C:\xampp\php\php.ini pelo que eu compartilhei na pasta 'Se necessário');
+
+
+COMO EXECUTAR
+1- Abra o cmder e digite 'cd Commcepta_Crud'
+2- Depois 'php artisan serve' - para iniciar o server 
+
+BANCO DE DADOS
+Para linkar com o banco de dados de ser preenchido esses três dados do arquivo .env (raíz do projeto)
+
+DB_DATABASE=commcepta_crud   
+DB_USERNAME=root             
+DB_PASSWORD=masterkey        
