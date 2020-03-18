@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 class VendedoresController extends Controller
 {
       public function index() {
-        $vendedores = Vendedor::all();
-        return view('vendedores.index', ['vendedores' => $vendedores]);
+          $vendedores = Vendedor::orderBy('nome')->paginate(3);
+          return view('vendedores.index', ['vendedores' => $vendedores]);
     }
 
     //Método para redirecionar para a view com os formulários de criação

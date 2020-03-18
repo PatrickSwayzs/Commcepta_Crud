@@ -30,6 +30,7 @@
             @endforeach
             </tbody>
         </table>
+        {{ $vendas->links() }}
     </div>
     <br>
     <a href="{{ route('vendas.create') }}" class="btn btn-info">Novo</a>

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class VendasController extends Controller
 {
     public function index() {
-        $vendas = Venda::all();
+        $vendas = Venda::orderBy('id')->paginate(3);
         return view('vendas.index', ['vendas' => $vendas]);
     }
 

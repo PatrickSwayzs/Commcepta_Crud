@@ -41,6 +41,7 @@
             @endforeach
             </tbody>
         </table>
+        {{ $vendedores->links() }}
     </div>
     <br>
     <a href="{{ route('vendedores.create') }}" class="btn btn-info">Novo</a>
