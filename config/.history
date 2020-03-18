@@ -13,3 +13,11 @@ composer update jeroennoten/laravel-adminlte
 php artisan serve
 composer require jeroennoten/laravel-adminlte
 composer require laravelcollective/html
+cd Commcepta_Crud
+php artisan make:request ProdutoRequest
+php artisan make:request VendedorRequest
+php artisan make:model Venda -m
+php artisan migrate
+php artisan make:controller VendasController
+php artisan make:request VendasRequest
+php artisan serve

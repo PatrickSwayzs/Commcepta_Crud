@@ -23,9 +23,14 @@
                         <!-- Botões para editar e excluir -->
                         <a href="{{ route('vendas.edit', ['id'=>$ven->id]) }}"
                            class="btn-sm btn-success"> Editar</a>
-                        <a onclick="return confirm('Confirmar a Exclusão?')" href="{{ route('vendas.destroy', ['id'=>$ven->id]) }}"
+                        <a onclick="return confirm('Confirmar a Exclusão?')"
+                           href="{{ route('vendas.destroy', ['id'=>$ven->id]) }}"
                            class="btn-sm btn-danger"> Remover</a>
                     </td>
-        @endforeach
+            @endforeach
+            </tbody>
+        </table>
     </div>
+    <br>
+    <a href="{{ route('vendas.create') }}" class="btn btn-info">Novo</a>
 @endsection
