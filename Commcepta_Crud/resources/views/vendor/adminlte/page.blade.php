@@ -176,12 +176,12 @@
         @if(!config('adminlte.layout_topnav') && !View::getSection('layout_topnav'))
         <aside class="main-sidebar {{config('adminlte.classes_sidebar', 'sidebar-dark-primary elevation-4')}}">
             @if(config('adminlte.logo_img_xl'))
-                <a href="{{ $dashboard_url }}" class="brand-link logo-switch">
+                <a href="{{ url('produtos') }}" class="brand-link logo-switch">
                     <img src="{{ asset(config('adminlte.logo_img', 'vendor/adminlte/dist/img/AdminLTELogo.png')) }}" alt="{{config('adminlte.logo_img_alt', 'AdminLTE')}}" class="{{config('adminlte.logo_img_class', 'brand-image-xl')}} logo-xs">
                     <img src="{{ asset(config('adminlte.logo_img_xl')) }}" alt="{{config('adminlte.logo_img_alt', 'AdminLTE')}}" class="{{config('adminlte.logo_img_xl_class', 'brand-image-xs')}} logo-xl">
                 </a>
             @else
-                <a href="{{ $dashboard_url }}" class="brand-link {{ config('adminlte.classes_brand') }}">
+                <a href="{{ url('produtos') }}" class="brand-link {{ config('adminlte.classes_brand') }}">
                     <img src="{{ asset(config('adminlte.logo_img', 'vendor/adminlte/dist/img/AdminLTELogo.png')) }}" alt="{{config('adminlte.logo_img_alt', 'AdminLTE')}}" class="{{ config('adminlte.logo_img_class', 'brand-image img-circle elevation-3') }}" style="opacity: .8">
                     <span class="brand-text font-weight-light {{ config('adminlte.classes_brand_text') }}">
                         {!! config('adminlte.logo', '<b>Admin</b>LTE') !!}
@@ -191,7 +191,10 @@
             <div class="sidebar">
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column {{config('adminlte.classes_sidebar_nav', '')}}" data-widget="treeview" role="menu" @if(config('adminlte.sidebar_nav_animation_speed') != 300) data-animation-speed="{{config('adminlte.sidebar_nav_animation_speed')}}" @endif @if(!config('adminlte.sidebar_nav_accordion')) data-accordion="false" @endif>
-                        @each('adminlte::partials.menu-item', $adminlte->menu(), 'item')
+                        <li class="nav-header">Acessos</li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('produtos') }}"><i class="fas fa-box"></i> <p>Produtos</p></a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('vendedores') }}"><i class='fa fa-user'></i> <p>Vendedores</p></a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('vendas') }}"><i class="fas fa-shopping-cart"></i> <p>Vendas</p></a></li>
                     </ul>
                 </nav>
             </div>

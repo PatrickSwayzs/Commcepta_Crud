@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Rotas Produtos
 Route::group(['prefix' => 'produtos', 'where' => ['id' => '[0-9]+']], function () {

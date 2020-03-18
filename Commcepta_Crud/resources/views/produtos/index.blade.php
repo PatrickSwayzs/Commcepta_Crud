@@ -2,7 +2,7 @@
 @section('content')
 
     @if(session()->has('not1'))
-        <div  class="table table-striped table-bordered table-hover">
+        <div class="table table-striped table-bordered table-hover">
             <div class="alert alert-danger" style="width: 40%">
                 <button type="button" class="close" aria-hidden="true"></button>
                 <strong>Notificação:</strong> {{ session()->get('not1')}}
@@ -10,7 +10,7 @@
         </div>
     @endif
     @if(session()->has('not2'))
-        <div  class="table table-striped table-bordered table-hover">
+        <div class="table table-striped table-bordered table-hover">
             <div class="alert alert-danger" style="width: 40%">
                 <button type="button" class="close" aria-hidden="true"></button>
                 <strong>Notificação:</strong> {{ session()->get('not2')}}
@@ -39,8 +39,7 @@
                         <!-- Botões para editar e excluir -->
                         <a href="{{ route('produtos.edit', ['id'=>$prod->id]) }}"
                            class="btn-sm btn-success"> Editar</a>
-                        <a onclick="return confirm('Confirmar a Exclusão?')"
-                           href="{{ route('produtos.destroy', ['id'=>$prod->id]) }}"
+                        <a onclick="return confirm('Confirmar a Exclusão?')" href="{{ route('produtos.destroy', ['id'=>$prod->id]) }}"
                            class="btn-sm btn-danger"> Remover</a>
                     </td>
             @endforeach
@@ -50,3 +49,4 @@
     <br>
     <a href="{{ route('produtos.create') }}" class="btn btn-info">Novo</a>
 @endsection
+
