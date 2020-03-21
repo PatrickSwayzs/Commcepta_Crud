@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 @section('content')
     @if(session()->has('not1'))
-        <div  class="table table-striped table-bordered table-hover">
+        <div class="table table-striped table-bordered table-hover">
             <div class="alert alert-danger" style="width: 40%">
                 <button type="button" class="close" aria-hidden="true"></button>
                 <strong>Notificação:</strong> {{ session()->get('not1')}}
@@ -9,7 +9,7 @@
         </div>
     @endif
     @if(session()->has('not2'))
-        <div  class="table table-striped table-bordered table-hover">
+        <div class="table table-striped table-bordered table-hover">
             <div class="alert alert-danger" style="width: 40%">
                 <button type="button" class="close" aria-hidden="true"></button>
                 <strong>Notificação:</strong> {{ session()->get('not2')}}
@@ -38,6 +38,7 @@
                            href="{{ route('vendedores.destroy', ['id'=>$vend->id]) }}"
                            class="btn-sm btn-danger"> Remover</a>
                     </td>
+                </tr>
             @endforeach
             </tbody>
         </table>
