@@ -15,3 +15,5 @@ Para linkar o projeto com o banco de dados deve ser preenchido esses três dados
 DB_DATABASE=commcepta_crud   
 DB_USERNAME=root             
 DB_PASSWORD=masterkey        
+
+para criar as tabelas nos banco é só execurar o comando 'php artisan migrate' no cmder (o banco deve ter sido criado no mysql). 

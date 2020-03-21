@@ -20,7 +20,7 @@ class CreateVendasTable extends Migration
             $table->integer('vendedores_id')->unsigned();
             $table->foreign('vendedores_id')->references('id')->on('vendedors');
             $table->string('quantidade');
-            $table->integer('valor');
+            $table->float('valor');
             $table->timestamps();
         });
     }

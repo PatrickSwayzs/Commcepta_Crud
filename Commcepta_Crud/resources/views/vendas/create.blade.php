@@ -32,12 +32,12 @@
 
         <div class="form-group" style="width: 40%">
             {!! Form::label('quantidade', 'Quantidade: ') !!}
-            {!! Form::number('quantidade', null, ['class'=>'form-control']) !!}
+            {!! Form::text('quantidade', null, ['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group" style="width: 40%">
             {!! Form::label('valor', 'Valor: ') !!}
-            {!! Form::number('valor', null, ['class'=>'form-control']) !!}
+            {!! Form::text('valor', null, ['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group">

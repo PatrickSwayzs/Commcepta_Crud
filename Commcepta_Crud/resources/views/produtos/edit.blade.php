@@ -32,7 +32,7 @@
 
         <div class="form-group" style="width: 40%">
             {!! Form::label('preco', 'Preço: ') !!}
-            {!! Form::number('preco', $produto->preco, ['class'=>'form-control']) !!}
+            {!! Form::text('preco', $produto->preco, ['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group">
