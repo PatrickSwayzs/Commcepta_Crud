@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 @section('content')
-
+    <!-- Notificações de erro no preenchimento de algum dado-->
     @if(session()->has('not1'))
         <div class="table table-striped table-bordered table-hover">
             <div class="alert alert-danger" style="width: 40%">

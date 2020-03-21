@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class VendasController extends Controller
 {
+    //Método que lista os itens da tabela 'vendas' e página a cada 5
     public function index()
     {
         $vendas = Venda::orderBy('id')->paginate(5);

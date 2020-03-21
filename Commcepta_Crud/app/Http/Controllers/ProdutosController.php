@@ -8,6 +8,7 @@ use App\Produto;
 
 class ProdutosController extends Controller
 {
+    //Método que lista os itens da tabela 'produtos' e página a cada 5
     public function index()
     {
         $produtos = Produto::orderBy('descricao')->paginate(5);

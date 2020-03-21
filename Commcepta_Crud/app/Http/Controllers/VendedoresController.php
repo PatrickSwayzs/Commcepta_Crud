@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class VendedoresController extends Controller
 {
+    //Método que lista os itens da tabela 'vendedors' e página a cada 5
     public function index()
     {
         $vendedores = Vendedor::orderBy('nome')->paginate(5);
