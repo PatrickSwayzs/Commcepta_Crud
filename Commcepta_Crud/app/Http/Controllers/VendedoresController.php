@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class VendedoresController extends Controller
 {
       public function index() {
-          $vendedores = Vendedor::orderBy('nome')->paginate(3);
+          $vendedores = Vendedor::orderBy('nome')->paginate(5);
           return view('vendedores.index', ['vendedores' => $vendedores]);
     }
 

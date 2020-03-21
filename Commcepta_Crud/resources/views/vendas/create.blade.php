@@ -32,7 +32,7 @@
 
         <div class="form-group" style="width: 40%">
             {!! Form::label('quantidade', 'Quantidade: ') !!}
-            {!! Form::text('quantidade', null, ['class'=>'form-control']) !!}
+            {!! Form::number('quantidade', null, ['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group" style="width: 40%">

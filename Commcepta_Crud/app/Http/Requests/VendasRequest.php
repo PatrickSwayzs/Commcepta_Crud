@@ -29,7 +29,7 @@ class VendasRequest extends FormRequest
             'produtos_id' => 'required',
             'vendedores_id' => 'required',
             'quantidade' => 'required|numeric',
-            'valor' => 'required'
+            'valor' => 'required|numeric'
         ];
     }
 }

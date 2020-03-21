@@ -31,6 +31,7 @@ Route::group(['prefix' => 'vendedores', 'where' => ['id' => '[0-9]+']], function
 //Rotas Vendas
 Route::group(['prefix' => 'vendas', 'where' => ['id' => '[0-9]+']], function () {
     Route::any('', ['as' => 'vendas', 'uses' => 'VendasController@index']);
+    Route::get('relatorio', ['as' => 'vendas.relatorio', 'uses' => 'VendasController@gerarPdf']);
     Route::get('create', ['as' => 'vendas.create', 'uses' => 'VendasController@create']);
     Route::get('{id}/destroy', ['as' => 'vendas.destroy', 'uses' => 'VendasController@destroy']);
     Route::get('{id}/edit', ['as' => 'vendas.edit', 'uses' => 'VendasController@edit']);

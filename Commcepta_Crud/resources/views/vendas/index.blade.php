@@ -34,4 +34,5 @@
     </div>
     <br>
     <a href="{{ route('vendas.create') }}" class="btn btn-info">Novo</a>
+    <a href="{{ route('vendas.relatorio') }}" class="btn btn-info">Relatório</a>
 @endsection

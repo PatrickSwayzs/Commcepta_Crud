@@ -9,7 +9,7 @@ use App\Produto;
 class ProdutosController extends Controller
 {
     public function index() {
-        $produtos = Produto::orderBy('descricao')->paginate(3);
+        $produtos = Produto::orderBy('descricao')->paginate(5);
         return view('produtos.index', ['produtos' => $produtos]);
     }
 
