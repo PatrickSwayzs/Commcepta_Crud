@@ -8,6 +8,7 @@ por favor substitua o arquivo 'php.ini' localizado na pasta do 'xampp/php/php.in
 COMO EXECUTAR
 1- Abra o executavel do cmder e digite 'cd Commcepta_Crud'
 2- Depois 'php artisan serve' - para iniciar o server 
+3- Quando o server inciar só entrar no link que vai aparecer no cmder
 
 BANCO DE DADOS
 Para linkar o projeto com o banco de dados deve ser preenchido esses três dados do arquivo .env (raíz do projeto)
